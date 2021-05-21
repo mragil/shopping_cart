@@ -5,7 +5,7 @@ import formatRupiah from "../../helper/FormatRupiah";
 
 export const CartItemList = () => {
   const cartContext = useContext(CartContext);
-  const { clearCart, cartItems, totalPrice } = cartContext;
+  const { clearCart, cartItems, totalPrice, totalItem } = cartContext;
   return (
     <div className="px-6 mt-5">
       {cartItems.length !== 0 ? (
@@ -17,9 +17,10 @@ export const CartItemList = () => {
               ))}
             </div>
             <div className="text-center space-y-5">
-              <h3 className="font-bold text-xl">
+              <h3 className="font-bold text-2xl">
                 Total Price : {formatRupiah(totalPrice)}
               </h3>
+              <h3 className="font-bold text-2xl">Total Item : {totalItem}</h3>
               <button
                 onClick={clearCart}
                 className="rounded-lg bg-blue-500 py-2 px-4 text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"

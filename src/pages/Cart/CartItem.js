@@ -5,7 +5,7 @@ export const CartItem = ({ cartItem }) => {
   const cartContext = useContext(CartContext);
   const { increaseQty, decreaseQty, removeFromChart } = cartContext;
   return (
-    <div className="md:flex md:flex-wrap mx-0 my-5 py-2 hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100 ">
+    <div className="md:flex md:flex-wrap mx-0 my-5 py-2 font-medium hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-100 ">
       <div className="md:flex-16.67 md:max-w-16.67">
         <img
           className="block my-0 mx-auto max-h-48 md:max-h-32 max-w-full h-auto"

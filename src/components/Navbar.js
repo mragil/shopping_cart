@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import CartContext from "../context/Cart/cartContext";
 
 export const Navbar = () => {
+  const cartContext = useContext(CartContext);
+  const { totalItem } = cartContext;
   const [isToogle, setIsToogle] = useState(false);
   const toogle = () => {
     setIsToogle(!isToogle);
@@ -40,7 +43,7 @@ export const Navbar = () => {
                 activeClassName="font-bold text-blue-900"
                 className="py-5 px-3 text-gray-700 hover:text-gray-900 font-light"
               >
-                Cart
+                Cart({totalItem})
               </NavLink>
               <NavLink
                 to="/about"
