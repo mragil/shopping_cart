@@ -25,7 +25,7 @@ export const CartItem = ({ cartItem }) => {
       <div className="p-2 space-x-10 md:text-right md:flex-33.33 md:max-w-33.33">
         <button
           onClick={() => increaseQty(cartItem)}
-          className="font-bold text-xl"
+          className="font-bold text-xl transform active:translate-y-1 focus:outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const CartItem = ({ cartItem }) => {
         {cartItem.quantity > 1 && (
           <button
             onClick={() => decreaseQty(cartItem)}
-            className="font-bold text-xl"
+            className="font-bold text-xl transform active:translate-y-1 focus:outline-none "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export const CartItem = ({ cartItem }) => {
         {cartItem.quantity === 1 && (
           <button
             onClick={() => removeFromChart(cartItem)}
-            className="font-bold text-xl"
+            className="font-bold text-xl transform active:translate-y-1 focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
