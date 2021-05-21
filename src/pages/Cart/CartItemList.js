@@ -23,7 +23,7 @@ export const CartItemList = () => {
               <h3 className="font-bold text-2xl">Total Item : {totalItem}</h3>
               <button
                 onClick={clearCart}
-                className="rounded-lg bg-blue-500 py-2 px-4 text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                className="rounded-lg bg-blue-500 py-2 px-4 text-white active:translate-y-2 focus:outline-none transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
               >
                 Clear Cart
               </button>

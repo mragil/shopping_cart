@@ -28,7 +28,7 @@ export const ProductCard = ({ product }) => {
           {!isInCart(product) ? (
             <button
               onClick={() => addToCart(product)}
-              className="flex space-x-2 justify-center items-center rounded-xl py-2 px-4 mt-5 bg-blue-500 shadow-2xl  text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+              className="flex space-x-2 justify-center items-center rounded-xl py-2 px-4 mt-5 active:translate-y-2 focus:outline-none bg-blue-500 shadow-2xl text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export const ProductCard = ({ product }) => {
           ) : (
             <button
               onClick={() => increaseQty(product)}
-              className="flex space-x-2 justify-center items-center rounded-xl py-2 px-4 mt-4 bg-blue-500 shadow-2xl  text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+              className="flex space-x-2 justify-center items-center rounded-xl py-2 px-4 mt-5 active:translate-y-2 focus:outline-none bg-blue-500 shadow-2xl  text-white transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
